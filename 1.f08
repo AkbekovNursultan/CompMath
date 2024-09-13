@@ -2,7 +2,7 @@ program Epsilon
 implicit none
 real :: epsi32
 double precision :: epsi64
-integer:: iter32=1, iter64=1
+integer:: iter32=0, iter64=0
 
 
 epsi32=1.0
