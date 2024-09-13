@@ -2,7 +2,7 @@ program Zero
 implicit none
 real :: zero32, last_zero32
 double precision :: zero64, last_zero64
-integer:: iter32=1, iter64=1
+integer:: iter32=0, iter64=0
 
 
 zero32=1.0
