@@ -1,9 +1,9 @@
-program float_to_binary
+program binaryCalc
     implicit none
     double precision :: number
     integer :: intPart, fracLen
     double precision :: fracPart
-    character(len=128) :: binaryInt, binaryFrac
+    character(len=64) :: binaryInt, binaryFrac
 
     write (*,*) "Enter a floating-point number:"
     read (*,*) number
@@ -15,14 +15,14 @@ program float_to_binary
 
     binaryInt = convertIntToBinary(intPart)
     binaryFrac = convertFracToBinary(fracPart, fracLen)
-    print *, binaryFrac
-    print *, "Binary representation: ", trim(binaryInt) // "." // binaryFrac
+    write(*,*) binaryFrac
+    write(*,*) "Binary representation: ", trim(binaryInt) // "." // binaryFrac
 
 contains
 
     function convertIntToBinary(num) result(returnedValue)
         integer :: num
-        character(len=128) :: returnedValue
+        character(len=64) :: returnedValue
         integer :: remainder
         character(len=1) :: binaryValue
 
@@ -68,4 +68,4 @@ contains
 end function convertFracToBinary
 
 
-end program float_to_binary
+end program binaryCalc
